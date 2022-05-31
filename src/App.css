@@ -27,6 +27,11 @@ button {
   border: none;
 }
 
+a{
+  text-decoration: none;
+  color: var(--myWhite);
+}
+
 /* ------------NAVBAR------------ */
 
 .navbar {
@@ -60,3 +65,11 @@ button {
   color: var(--myWhite);
 }
 
+
+/* -----------FOOTER--------------------- */
+
+footer{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
