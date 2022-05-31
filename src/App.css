@@ -1,38 +1,62 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600;700&display=swap");
+
+:root {
+  --myBlue: #9ac1ed;
+  --myBlack: #1f1f1f;
+  --myWhite: #fdfeff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Signika Negative", sans-serif;
+  font-weight: lighter;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--myBlack);
+  color: var(--myWhite);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ------------------------GLOBAL---------------------- */
+
+button {
+  outline: none;
+  background: transparent;
+  border: none;
+}
+
+/* ------------NAVBAR------------ */
+
+.navbar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding: 4%;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-links {
+  list-style: none;
+  padding: 0 5%;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transition: 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.show-links {
+  height: 9em;
 }
+
+.link {
+  padding: 5% 0;
+}
+
+.bar-icon{
+  color: var(--myWhite);
+}
+
