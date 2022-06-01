@@ -3,7 +3,7 @@ import { AiOutlineBars } from "react-icons/ai";
 import { useGlobalContext } from "../context";
 
 function Navbar() {
-  const { showLinks, handleShowLinks } = useGlobalContext();
+  const { showLinks, handleShowLinks, handleCategory } = useGlobalContext();
   return (
     <div>
       <nav className="navbar">
@@ -15,10 +15,21 @@ function Navbar() {
             <AiOutlineBars className="bar-icon" onClick={handleShowLinks} />
           </button>
           <ul className={`${showLinks ? "nav-links show-links" : "nav-links"}`}>
-            <li className="link">Bussiness</li>
-            <li className="link">Sports</li>
-            <li className="link">Science</li>
-            <li className="link">Entertainment</li>
+            <li className="link" onClick={handleCategory}>
+              General
+            </li>
+            <li className="link" onClick={handleCategory}>
+              Business
+            </li>
+            <li className="link" onClick={handleCategory}>
+              Sports
+            </li>
+            <li className="link" onClick={handleCategory}>
+              Science
+            </li>
+            <li className="link" onClick={handleCategory}>
+              Entertainment
+            </li>
           </ul>
         </div>
       </nav>
