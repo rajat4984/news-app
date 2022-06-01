@@ -7,8 +7,14 @@ export const AppProvider = ({ children }) => {
   const [newsData, setNewsData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [category, setCategory] = useState("general");
+  const [searchTerm, setSearchTerm] = useState("");
+
   const handleShowLinks = () => setShowLinks(!showLinks);
   const handleLoading = () => setLoading(!loading);
+  const handleSearchTerm = (e) => {
+    setSearchTerm(e.target.value);
+    console.log(searchTerm)
+  };
 
   const handleCategory = (e) => {
     setCategory(e.target.textContent.toLowerCase());
@@ -34,6 +40,8 @@ export const AppProvider = ({ children }) => {
         handleLoading,
         handleCategory,
         category,
+        searchTerm,
+        handleSearchTerm,
       }}
     >
       {children}

@@ -57,7 +57,7 @@ a {
 }
 
 .show-links {
-  height: 12em;
+  height: 15em;
 }
 
 .link {
@@ -66,6 +66,14 @@ a {
 
 .bar-icon {
   color: var(--myWhite);
+}
+
+input[type=text]{
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  padding: 1%;
+  border-radius: 2px;
 }
 
 /* ------------------------CARD----------------- */
