@@ -2,8 +2,9 @@
 
 :root {
   --myBlue: #9ac1ed;
-  --myBlack: #1f1f1f;
+  --myBlack: #1b1c1e;
   --myWhite: #fdfeff;
+  --myGrey: #202020dc;
 }
 
 * {
@@ -27,7 +28,7 @@ button {
   border: none;
 }
 
-a{
+a {
   text-decoration: none;
   color: var(--myWhite);
 }
@@ -43,6 +44,7 @@ a{
 }
 
 .nav-links {
+  width: 95vw;
   list-style: none;
   padding: 0 5%;
   height: 0;
@@ -51,25 +53,79 @@ a{
   top: 100%;
   left: 0%;
   transition: 0.3s ease;
+  background-color: var(--myBlack);
 }
 
 .show-links {
-  height: 9em;
+  height: 12em;
 }
 
 .link {
-  padding: 5% 0;
+  padding: 2% 0;
 }
 
-.bar-icon{
+.bar-icon {
   color: var(--myWhite);
 }
 
+/* ------------------------CARD----------------- */
+
+.card-container {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 100px));
+  padding: 10%;
+  justify-content: center;
+  gap: 1.2%;
+}
+
+.card-body > img,
+h4,
+p {
+  padding: 1em 0;
+}
+
+.card-body {
+  background-color: white;
+  color: black;
+  padding: 0 3.5%;
+  border-radius: 5px;
+  box-shadow: 0 8px 16px 0 rgba(85, 85, 85, 0.2);
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-desc {
+  color: var(--myGrey);
+}
+
+.card-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.read-more-link {
+  color: #0000ee;
+}
+
+.card-info-container {
+  display: flex;
+  justify-content: space-between;
+  color: var(--myGrey);
+}
+
+/* ------------------LOADING--------------------- */
+.loading {
+  display: flex;
+  justify-content: center;
+}
 
 /* -----------FOOTER--------------------- */
 
-footer{
+footer {
   display: flex;
-  text-align: center;
   justify-content: center;
+  align-items: center;
 }
