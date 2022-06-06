@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useRef } from "react";
 
 const AppContext = React.createContext();
 
@@ -13,7 +13,6 @@ export const AppProvider = ({ children }) => {
   const handleLoading = () => setLoading(!loading);
   const handleSearchTerm = (e) => {
     setSearchTerm(e.target.value);
-    console.log(searchTerm)
   };
 
   const handleCategory = (e) => {
@@ -21,7 +20,7 @@ export const AppProvider = ({ children }) => {
     handleShowLinks();
   };
 
-  const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&apiKey=577416533b184a23b2e5b7918759e758`;
+  const url = `https://newsapi.org/v2/top-headlines?country=in&category=${category}&pageSize=30&apiKey=577416533b184a23b2e5b7918759e758`;
 
   const fetchNews = async () => {
     const response = await fetch(url);

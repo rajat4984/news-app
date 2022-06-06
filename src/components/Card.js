@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useGlobalContext } from "../context";
 
 function Card() {
-  const { fetchNews, newsData, loading, handleLoading, category, searchTerm } =
+  const { fetchNews, newsData, handleLoading, category, searchTerm } =
     useGlobalContext();
   useEffect(() => {
     fetchNews();
@@ -13,8 +13,8 @@ function Card() {
     <div>
       <div className="card-container">
         {newsData
-          .filter((term) =>
-            term.title.toLowerCase().includes(searchTerm.toLowerCase())
+          .filter((item) =>
+            item.title.toLowerCase().includes(searchTerm.toLowerCase())
           )
           .map((news, index) => {
             const { urlToImage, title, description, url, publishedAt } = news;
